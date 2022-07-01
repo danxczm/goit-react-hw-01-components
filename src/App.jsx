@@ -3,17 +3,20 @@ import data from './data/data.json'
 import friends from './data/friends.json'
 import transactions from './data/transactions.json'
 
-import Profile from './components/Profile';
-import Statistics from './components/Statistics';
-import FriendList from './components/FriendList';
-import TransactionHistory from './components/TransactionHistory';
+import Profile from './components/Profile/Profile';
+import Statistics from './components/Statistics/Statistics';
+import FriendList from './components/FriendList/FriendList';
+import TransactionHistory from './components/TransactionHistory/TransactionHistory';
+import s from './App.module.css';
+
 
 
 
 export default function App() {
 	return (
 		<>
-      <Profile
+			<div className={s.container}>
+				<Profile
         username={user.username}
         tag={user.tag}
         location={user.location}
@@ -28,6 +31,7 @@ export default function App() {
 
 			<TransactionHistory items={transactions} />
 
+			</div>
     </>
   );
 };

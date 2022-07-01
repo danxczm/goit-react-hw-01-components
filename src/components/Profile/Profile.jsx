@@ -1,28 +1,29 @@
-// import { Box } from './components/Box';
+
+import css from './Profile.module.css';
 import PropTypes from 'prop-types';
 
 
 export default function Profile({ username, tag, location, avatar, stats }) {
 	return (
-    <div class="profile">
-      <div class="description" display="flex" >
-        <img src={avatar} alt="User avatar" class="avatar" width='150px'/>
-        <p class="name">{username}</p>
-        <p class="tag">@{tag}</p>
+		<div className={css.profile}>
+			<div className={css.user}>
+        <img className={css.avatar} src={avatar} alt="User avatar" class="avatar" width='150px'/>
+        <p className={css.name}>{username}</p>
+        <p className={css.tag}>@{tag}</p>
         <p class="location">{location}</p>
       </div>
 
-      <ul class="stats">
+      <ul className={css.stats}>
         <li>
-          <span class="label">Followers</span>
+          <span className={css.label}>Followers</span>
           <span class="quantity">{stats.followers}</span>
         </li>
         <li>
-          <span class="label">Views</span>
+          <span className={css.label}>Views</span>
           <span class="quantity">{stats.views}</span>
         </li>
         <li>
-          <span class="label">Likes</span>
+          <span className={css.label}>Likes</span>
           <span class="quantity">{stats.likes}</span>
         </li>
       </ul>
