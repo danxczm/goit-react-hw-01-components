@@ -7,24 +7,24 @@ export default function Profile({ username, tag, location, avatar, stats }) {
 	return (
 		<div className={css.profile}>
 			<div className={css.user}>
-        <img className={css.avatar} src={avatar} alt="User avatar" class="avatar" width='150px'/>
+        <img className={css.avatar} src={avatar} alt="User avatar" width='150px'/>
         <p className={css.name}>{username}</p>
         <p className={css.tag}>@{tag}</p>
-        <p class="location">{location}</p>
+        <p>{location}</p>
       </div>
 
       <ul className={css.stats}>
         <li>
           <span className={css.label}>Followers</span>
-          <span class="quantity">{stats.followers}</span>
+          <span>{stats.followers}</span>
         </li>
         <li>
           <span className={css.label}>Views</span>
-          <span class="quantity">{stats.views}</span>
+          <span>{stats.views}</span>
         </li>
         <li>
           <span className={css.label}>Likes</span>
-          <span class="quantity">{stats.likes}</span>
+          <span>{stats.likes}</span>
         </li>
       </ul>
     </div>
