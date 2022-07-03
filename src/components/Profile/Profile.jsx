@@ -1,13 +1,16 @@
-
 import css from './Profile.module.css';
 import PropTypes from 'prop-types';
 
-
 export default function Profile({ username, tag, location, avatar, stats }) {
-	return (
-		<div className={css.profile}>
-			<div className={css.user}>
-        <img className={css.avatar} src={avatar} alt="User avatar" width='150px'/>
+  return (
+    <div className={css.profile}>
+      <div className={css.user}>
+        <img
+          className={css.avatar}
+          src={avatar}
+          alt="User avatar"
+          width="150px"
+        />
         <p className={css.name}>{username}</p>
         <p className={css.tag}>@{tag}</p>
         <p>{location}</p>
@@ -29,12 +32,12 @@ export default function Profile({ username, tag, location, avatar, stats }) {
       </ul>
     </div>
   );
-};
+}
 
 Profile.propTypes = {
-	username: PropTypes.string.isRequired,
-	tag: PropTypes.string.isRequired,
-	location: PropTypes.string.isRequired,
-	avatar: PropTypes.string.isRequired,
-	stats: PropTypes.objectOf(PropTypes.number).isRequired,
-}
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  stats: PropTypes.objectOf(PropTypes.number).isRequired,
+};
