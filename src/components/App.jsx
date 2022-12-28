@@ -14,7 +14,7 @@ JS-код чистий та зрозумілий, використовуєтьс
 */
 
 import { Profile } from 'components/Profile/Profile';
-import user from './data/user.json';
+import user from '../data/user.json';
 
 export const App = () => {
   return (
