@@ -13,7 +13,7 @@ JS-код чистий та зрозумілий, використовуєтьс
 Достатньо базової стилізації застосунку, насамперед він повинен працювати, а вже потім бути гарним. Приділяй 20% часу на CSS і 80% на JS.
 */
 
-import Profile from './Profile/Profile';
+import { Profile } from 'components/Profile/Profile';
 import user from 'data/user.json';
 
 export const App = () => {
