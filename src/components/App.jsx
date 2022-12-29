@@ -14,11 +14,14 @@ JS-код чистий та зрозумілий, використовуєтьс
 */
 
 import { Profile } from 'components/Profile/Profile';
+import { Statistics } from 'components/Statistics/Statistics';
+
+import data from 'data/data.json';
 import user from 'data/user.json';
 
 export const App = () => {
   return (
-    <div>
+    <>
       <Profile
         username={user.username}
         tag={user.tag}
@@ -28,6 +31,8 @@ export const App = () => {
         views={user.stats.views}
         likes={user.stats.likes}
       />
-    </div>
+      <Statistics title="Upload stats" stats={data} />
+      <Statistics stats={data} />
+    </>
   );
 };
