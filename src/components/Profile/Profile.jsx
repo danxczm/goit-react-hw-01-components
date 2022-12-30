@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { FaUserAlt, FaInstagramSquare, FaMapMarkerAlt } from 'react-icons/fa';
 import css from 'components/Profile/Profile.module.css';
 
 export const Profile = ({
@@ -13,13 +14,21 @@ export const Profile = ({
   return (
     <div className={css.profile}>
       <div className={css.description}>
-        <img src={avatar} alt={username} className="avatar" />
-        <p className="name">{username}</p>
-        <p className="tag">@{tag}</p>
-        <p className="location">{location}</p>
+        <img className={css.avatar} src={avatar} alt={username} />
+        <p className="name">
+          <FaUserAlt className={css.icon} />
+          {username}
+        </p>
+        <p className="tag">
+          <FaInstagramSquare className={css.icon} size={20} />@{tag}
+        </p>
+        <p className="location">
+          <FaMapMarkerAlt className={css.icon} />
+          {location}
+        </p>
       </div>
 
-      <ul className="stats">
+      <ul className={css.stats}>
         <li>
           <span className="label">Followers </span>
           <span className="quantity">{followers}</span>
