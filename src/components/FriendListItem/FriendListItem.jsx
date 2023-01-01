@@ -1,18 +1,18 @@
 import PropTypes from 'prop-types';
-import css from 'components/FriendListItem/FriendListItem.module.css';
+// import css from 'components/FriendListItem/FriendListItem.module.css';
+import {
+  Item,
+  Status,
+  Name,
+} from 'components/FriendListItem/FriendListItem.styled.jsx';
 
 export const FriendListItem = ({ id, avatar, name, isOnline }) => {
   return (
-    <li key={id} className={css.item}>
-      <span
-        className={css.status}
-        style={{ color: isOnline ? 'green' : 'red' }}
-      >
-        ●
-      </span>
-      <img className="avatar" src={avatar} alt={name} width="48" />
-      <p className={css.name}>{name}</p>
-    </li>
+    <Item key={id}>
+      <Status style={{ color: isOnline ? 'green' : 'red' }}>●</Status>
+      <img src={avatar} alt={name} width="48" />
+      <Name>{name}</Name>
+    </Item>
   );
 };
 

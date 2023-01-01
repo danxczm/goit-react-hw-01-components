@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { FaUserAlt, FaInstagramSquare, FaMapMarkerAlt } from 'react-icons/fa';
+// import css from 'components/Profile/Profile.module.css';
 import {
   ProfileContainer,
   Description,
@@ -44,7 +45,7 @@ export const Profile = ({
           <span>{views}</span>
         </li>
         <li>
-          <span>Likes </span>
+          <span>Likes</span>
           <span>{likes}</span>
         </li>
       </Stats>

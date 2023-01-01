@@ -1,11 +1,12 @@
 // import PropTypes from 'prop-types';
 import PropTypes from 'prop-types';
-import css from 'components/FriendList/FriendList.module.css';
+// import css from 'components/FriendList/FriendList.module.css';
+import { FriendListContainer } from 'components/FriendList/FriendList.styled.jsx';
 import { FriendListItem } from 'components/FriendListItem/FriendListItem';
 
 export const FriendList = ({ friends }) => {
   return (
-    <ul className={css.friend_list}>
+    <FriendListContainer>
       {friends.map(friend => (
         <FriendListItem
           key={friend.id}
@@ -15,7 +16,7 @@ export const FriendList = ({ friends }) => {
           isOnline={friend.isOnline}
         />
       ))}
-    </ul>
+    </FriendListContainer>
   );
 };
 
