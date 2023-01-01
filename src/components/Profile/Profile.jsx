@@ -1,6 +1,12 @@
 import PropTypes from 'prop-types';
 import { FaUserAlt, FaInstagramSquare, FaMapMarkerAlt } from 'react-icons/fa';
-import css from 'components/Profile/Profile.module.css';
+import {
+  ProfileContainer,
+  Description,
+  Info,
+  Avatar,
+  Stats,
+} from 'components/Profile/Profile.styled.jsx';
 
 export const Profile = ({
   username,
@@ -12,37 +18,37 @@ export const Profile = ({
   likes,
 }) => {
   return (
-    <div className={css.profile}>
-      <div className={css.description}>
-        <img className={css.avatar} src={avatar} alt={username} />
-        <p className="name">
-          <FaUserAlt className={css.icon} />
+    <ProfileContainer>
+      <Description>
+        <Avatar src={avatar} alt={username} />
+        <Info>
+          <FaUserAlt />
           {username}
-        </p>
-        <p className="tag">
-          <FaInstagramSquare className={css.icon} size={20} />@{tag}
-        </p>
-        <p className="location">
-          <FaMapMarkerAlt className={css.icon} />
+        </Info>
+        <Info>
+          <FaInstagramSquare size={20} />@{tag}
+        </Info>
+        <Info>
+          <FaMapMarkerAlt />
           {location}
-        </p>
-      </div>
+        </Info>
+      </Description>
 
-      <ul className={css.stats}>
+      <Stats>
         <li>
-          <span className="label">Followers </span>
-          <span className="quantity">{followers}</span>
+          <span> Followers</span>
+          <span>{followers}</span>
         </li>
         <li>
-          <span className="label">Views </span>
-          <span className="quantity">{views}</span>
+          <span>Views</span>
+          <span>{views}</span>
         </li>
         <li>
-          <span className="label">Likes </span>
-          <span className="quantity">{likes}</span>
+          <span>Likes </span>
+          <span>{likes}</span>
         </li>
-      </ul>
-    </div>
+      </Stats>
+    </ProfileContainer>
   );
 };
 
