@@ -1,12 +1,13 @@
 // import PropTypes from 'prop-types';
 import PropTypes from 'prop-types';
 // import css from 'components/FriendList/FriendList.module.css';
-import { FriendListContainer } from 'components/FriendList/FriendList.styled.jsx';
+// import { FriendListContainer } from 'components/FriendList/FriendList.styled.jsx';
+import { Box } from '../Box';
 import { FriendListItem } from 'components/FriendListItem/FriendListItem';
 
 export const FriendList = ({ friends }) => {
   return (
-    <FriendListContainer>
+    <Box mb={3} minWidth="300px">
       {friends.map(friend => (
         <FriendListItem
           key={friend.id}
@@ -16,7 +17,7 @@ export const FriendList = ({ friends }) => {
           isOnline={friend.isOnline}
         />
       ))}
-    </FriendListContainer>
+    </Box>
   );
 };
 

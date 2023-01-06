@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import { FaUserAlt, FaInstagramSquare, FaMapMarkerAlt } from 'react-icons/fa';
+import { Box } from '../Box';
 // import css from 'components/Profile/Profile.module.css';
 import {
-  ProfileContainer,
   Description,
   Info,
   Avatar,
@@ -19,7 +19,14 @@ export const Profile = ({
   likes,
 }) => {
   return (
-    <ProfileContainer>
+    <Box
+      minWidth="300px"
+      border={1}
+      borderColor="gray"
+      borderRadius={20}
+      borderStyle="solid"
+      mb={3}
+    >
       <Description>
         <Avatar src={avatar} alt={username} />
         <Info>
@@ -49,7 +56,7 @@ export const Profile = ({
           <span>{likes}</span>
         </li>
       </Stats>
-    </ProfileContainer>
+    </Box>
   );
 };
 

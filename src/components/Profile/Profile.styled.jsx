@@ -1,12 +1,5 @@
 import styled from '@emotion/styled';
 
-export const ProfileContainer = styled.div`
-  border: 1px solid gray;
-  border-radius: 30px;
-  min-width: 300px;
-  margin-bottom: 30px;
-`;
-
 export const Description = styled.div`
   display: flex;
   align-items: center;
@@ -15,6 +8,7 @@ export const Description = styled.div`
 `;
 
 export const Info = styled.p`
+  /* color: ${p => p.theme.color}; */
   display: flex;
   justify-content: center;
   align-items: center;

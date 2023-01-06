@@ -1,10 +1,5 @@
 import styled from '@emotion/styled';
 
-export const StatisticsContainer = styled.section`
-  margin-bottom: 30px;
-  width: 300px;
-`;
-
 export const Title = styled.h2`
   text-align: center;
   margin-bottom: 15px;

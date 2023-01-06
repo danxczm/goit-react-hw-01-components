@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
+import { Box } from '../Box';
 // import css from 'components/Statistics/Statistics.module.css';
 import {
-  StatisticsContainer,
   StatList,
   Title,
   Item,
@@ -11,7 +11,7 @@ import {
 
 export const Statistics = ({ title, stats }) => {
   return (
-    <StatisticsContainer>
+    <Box mb={3} minWidth="300px">
       {title && <Title>{title}</Title>}
       <StatList>
         {stats.map(({ id, label, percentage }) => (
@@ -21,7 +21,7 @@ export const Statistics = ({ title, stats }) => {
           </Item>
         ))}
       </StatList>
-    </StatisticsContainer>
+    </Box>
   );
 };
 
